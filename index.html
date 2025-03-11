@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="10TeQ – Pioneering Tech Innovation" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>10TeQ Inc – Pioneering Tech Innovation</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Font (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* -----------------------------
+       Custom Style & Color Palette
+    ----------------------------- */
+    :root {
+      --color-primary: #1A237E;    /* Deep navy */
+      --color-secondary: #37474F;  /* Dark gray */
+      --color-accent: #1565C0;     /* Blue accent */
+      --color-light-bg: #F5F7FA;   /* Light background */
+      --color-text: #212121;       /* Main text color */
+      --color-white: #FFFFFF;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: var(--color-text);
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-white);
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--color-white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 0.75rem 1rem;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--color-primary) !important;
+    }
+    .brand-container {
+      display: flex;
+      align-items: center;
+    }
+    .brand-logo {
+      height: 40px;
+      width: auto;
+      background-color: var(--color-primary); /* uses primary palette */
+      padding: 5px;
+      border-radius: 4px;
+      margin-right: 8px; /* space between image and text */
+    }
+    .nav-link {
+      color: var(--color-secondary) !important;
+      font-weight: 500;
+      margin-right: 1rem;
+    }
+    .nav-link:hover {
+      color: var(--color-primary) !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(
+        120deg,
+        #0D1A2A 0%,
+        #183B69 100%
+      );
+      color: var(--color-white);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    /* Section Headings */
+    .section-heading {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--color-primary);
+    }
+    .divider {
+      width: 60px;
+      height: 4px;
+      background-color: var(--color-accent);
+      margin: 0.75rem auto 2rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 1rem;
+    }
+    .bg-light-custom {
+      background-color: var(--color-light-bg);
+    }
+    .content p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Services Cards */
+    .service-card {
+      background: var(--color-white);
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card .card-body h5 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+    }
+
+    /* Single icon for each top-level service */
+    .icon-wrapper {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-wrapper ion-icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+    .contact-info {
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+
+    /* Images for Master Faster & do2 */
+    .section-logo {
+      display: block;
+      margin: 0 auto 1.5rem;  /* centers the image & adds spacing below */
+      max-width: 200px;       /* you can adjust size as needed */
+      height: auto;
+    }
+
+    /* Responsive Adjustments */
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <div class="brand-container">
+          <!-- Main company logo -->
+          <img
+            src="logo.png"
+            alt="10TeQ Logo"
+            class="brand-logo"
+          />
+          10TeQ Inc
+        </div>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#master-faster">Master Faster</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#do2">do2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mission-vision">Mission &amp; Vision</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>10TeQ Inc – Pioneering Tech Innovation</h1>
+      <p class="lead mb-0">
+        Empowering Businesses with Advanced App &amp; Software Solutions
+      </p>
+      <p class="mt-3 mb-0">
+        Transform your ideas into reality with our cutting-edge development expertise.
+      </p>
+    </div>
+  </header>
+
+  <!-- Cutting-Edge Solutions Section -->
+  <section class="bg-light-custom" id="cutting-edge">
+    <div class="container">
+      <div class="section-heading">Cutting-Edge Solutions</div>
+      <div class="divider"></div>
+      <div class="content text-center mx-auto" style="max-width: 800px;">
+        <p>
+          Stay ahead in the digital era with our high-performance, scalable applications. 
+          At 10TeQ Inc, we craft innovative solutions that drive business growth, 
+          ensuring you leverage the latest technology for success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="section-heading">Our Services</div>
+      <div class="divider"></div>
+
+      <div class="row g-4">
+        <!-- Web Development -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for Web Dev -->
+                <ion-icon name="globe-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">
+                Transform your online presence with expertly crafted, high-performance websites. 
+                From business sites to e-commerce platforms and custom web apps, 
+                we build visually stunning, user-friendly, and results-driven solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile App Development -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for Mobile Dev -->
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">Mobile App Development</h5>
+              <p class="card-text">
+                Unlock your business potential with custom-built mobile apps. 
+                We design seamless, high-performing solutions for iOS, Android, and cross-platform—ensuring 
+                an engaging user experience that drives growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Development -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for Platform Dev -->
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">Platform Development</h5>
+              <p class="card-text">
+                Empower your business with tailored digital platforms designed for scalability and efficiency.
+              </p>
+              <ul class="mt-3">
+                <li>E-Learning Platforms – Advanced, interactive solutions.</li>
+                <li>Marketplace &amp; E-Commerce – Secure, scalable platforms.</li>
+                <li>Community &amp; Networking – Spaces for users to connect &amp; collaborate.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI & Machine Learning -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for AI & ML -->
+                <ion-icon name="hardware-chip-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">AI &amp; Machine Learning</h5>
+              <p class="card-text">
+                Harness the power of AI to drive innovation and efficiency in your business.
+              </p>
+              <ul class="mt-3">
+                <li>Custom AI Tool Development – Tailored for industry-specific needs.</li>
+                <li>Chatbot &amp; Virtual Assistant – Intelligent customer support.</li>
+                <li>Predictive Analytics &amp; Data Insights – Data-driven decisions.</li>
+                <li>Automation &amp; Process Optimization – Streamlined operations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software Development -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for Software Dev -->
+                <ion-icon name="code-slash-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">Software Development</h5>
+              <p class="card-text">
+                Build powerful, scalable, and customized software solutions to elevate your business.
+              </p>
+              <ul class="mt-3">
+                <li>Custom Software Solutions – End-to-end tailored apps.</li>
+                <li>Mobile &amp; Web App Development – High-performance across platforms.</li>
+                <li>SaaS Development – Scalable, cloud-based solutions.</li>
+                <li>Enterprise Integration – Optimized operations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Growth & Support Services -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for Growth & Support -->
+                <ion-icon name="bar-chart-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">Growth &amp; Support</h5>
+              <p class="card-text">
+                Ensure your products thrive with expert support and strategic scaling solutions.
+              </p>
+              <ul class="mt-3">
+                <li>Product Launch &amp; Go-to-Market Strategy – Successful introductions.</li>
+                <li>Maintenance &amp; Support – Smooth post-launch operations.</li>
+                <li>Scalability &amp; Performance – Future-proofing for sustained growth.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technology Consulting -->
+        <div class="col-md-6 col-lg-4 offset-lg-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="icon-wrapper">
+                <!-- Ionicon for Consulting -->
+                <ion-icon name="bulb-outline"></ion-icon>
+              </div>
+              <h5 class="card-title">Technology Consulting</h5>
+              <p class="card-text">
+                Leverage expert guidance to navigate digital transformation and IT advancements.
+              </p>
+              <ul class="mt-3">
+                <li>Digital Transformation – Modern tech for accelerated growth.</li>
+                <li>Business Process Analysis &amp; Strategy – Optimizing workflows.</li>
+                <li>IT Infrastructure &amp; Cloud – Secure, scalable, cutting-edge environments.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- end row -->
+    </div>
+  </section>
+
+  <!-- Master Faster Section -->
+  <section id="master-faster" class="bg-light-custom">
+    <div class="container">
+      <div class="section-heading">Master Faster – Learn Smarter, Achieve More</div>
+      <div class="divider"></div>
+      <!-- Master Faster Logo -->
+      <img
+        src="ms.png"
+        alt="Master Faster Logo"
+        class="section-logo"
+      />
+      <div class="content mx-auto" style="max-width: 800px;">
+        <p>
+          An innovative AI-powered learning app designed to help students excel in challenging exams. 
+          Featuring intelligent study tools, interactive tests, and personalized learning paths, 
+          Master Faster transforms exam preparation into an efficient and engaging experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- do2 Section -->
+  <section id="do2">
+    <div class="container">
+      <div class="section-heading">do2 – AI-Driven Digital Marketing</div>
+      <div class="divider"></div>
+      <!-- do2 Logo -->
+      <img
+        src="do2.png"
+        alt="do2 Logo"
+        class="section-logo"
+      />
+      <div class="content mx-auto" style="max-width: 800px;">
+        <p>
+          Data O2 (do2) is an advanced AI-powered digital marketing platform that revolutionizes content creation 
+          and SEO automation. By leveraging cutting-edge artificial intelligence, do2 helps businesses 
+          enhance online visibility, optimize content strategy, and drive growth effortlessly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section id="mission-vision" class="bg-light-custom">
+    <div class="container">
+      <div class="row">
+        <!-- Mission -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="section-heading">Our Mission</div>
+          <div class="divider"></div>
+          <div class="content">
+            <p>
+              At 10TeQ, we transform technology into real-world value, empowering businesses and individuals 
+              with cutting-edge solutions. Our mission is to develop innovative, reliable, and human-centric 
+              advancements in AI, software engineering, and digital platforms. Through collaboration, curiosity, 
+              and excellence, we help our clients navigate the ever-evolving digital landscape—driving growth, 
+              efficiency, and lasting success.
+            </p>
+          </div>
+        </div>
+        <!-- Vision -->
+        <div class="col-md-6">
+          <div class="section-heading">Our Vision</div>
+          <div class="divider"></div>
+          <div class="content">
+            <p>
+              We envision a future where technology seamlessly integrates into everyday life, 
+              enhancing experiences, solving real-world challenges, and unlocking new opportunities. 
+              At 10TeQ, we aim to be a global leader in technological innovation, known for our integrity, 
+              creativity, and impact. By continuously pushing boundaries and pioneering transformative solutions, 
+              we shape the digital future—inspiring, connecting, and empowering the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; <span id="year"></span> 10TeQ Inc. All rights reserved.
+      </p>
+      <p class="contact-info">
+        Phone: +1 778-382-9496 | Email: <a href="mailto:info@10teq.ca" class="text-white">info@10teq.ca</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Ionicons 5 (JS) -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+  <script>
+    // Dynamically set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
